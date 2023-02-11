@@ -1,0 +1,10 @@
+mutation updateFundRaisingPost($fundRaisingPost:GenericMutationRequestCreateFundRaisingPostInputType!){
+  updateFundRaisingPost(fundRaisingPost:$fundRaisingPost){
+    isSuccess
+    listDto{
+      items{
+       id
+    }
+    }
+  }
+}

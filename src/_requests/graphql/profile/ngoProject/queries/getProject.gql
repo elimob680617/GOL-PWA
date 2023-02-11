@@ -1,0 +1,31 @@
+query getProjects($filter: GenericFilterRequestOrganizationUserProjectInputType!) {
+  getProjects(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+        description
+        audience
+        startDate
+        endDate
+        stillWorkingThere
+        cityId
+        cityDto {
+          name
+          id
+          placeId
+          countryId
+        }
+        dateDiff {
+          years
+          months
+          days
+        }
+        projectMedias {
+          id
+          url
+        }
+      }
+    }
+  }
+}

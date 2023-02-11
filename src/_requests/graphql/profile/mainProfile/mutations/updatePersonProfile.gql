@@ -1,0 +1,13 @@
+mutation updatePersonProfile($filter: GenericMutationRequestPersonProfileInputType! ){
+  updatePersonProfile(filter:$filter) {
+    isSuccess
+      messagingKey
+  } 
+}
+
+mutation updateProfileFiled ($filter: GenericMutationRequestPersonInputType! ) {
+  updateProfileFiled(filter: $filter){
+    isSuccess
+    messagingKey
+  }
+}

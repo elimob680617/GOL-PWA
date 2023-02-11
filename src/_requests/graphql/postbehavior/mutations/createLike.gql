@@ -1,0 +1,18 @@
+
+mutation createLike ($like:GenericMutationRequestCreateLikeInputType!){
+  createLike(like:$like) {
+    listDto {
+      items {
+        isLike
+        count
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  } 
+}

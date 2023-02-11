@@ -1,0 +1,12 @@
+query getNumberRanges($filter: GenericFilterRequestNumberRangeInputType!) {
+  getNumberRanges(filter: $filter) {
+    listDto {
+      items {
+        id
+        from
+        to
+        desc
+      }
+    }
+  }
+}

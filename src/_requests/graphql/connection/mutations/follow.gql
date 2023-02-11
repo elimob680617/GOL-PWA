@@ -1,0 +1,16 @@
+mutation follow($filter: GenericMutationRequestFollowInputType!) {
+  follow(filter: $filter) {
+    listDto {
+      items {
+        id
+        itemId
+        itemType
+        meToOtherStatus
+        otherToMeStatus
+      }
+      count
+    }
+    messagingKey
+    isSuccess
+  }
+}

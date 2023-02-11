@@ -1,0 +1,28 @@
+query getHelpCategoriesQuery($filter: GenericFilterRequestCategoryRequestType!) {
+  getHelpCategoriesQuery(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+        iconUrl
+        permalink
+        description
+        parentId
+        titleTranslations {
+          key
+          value
+        }
+        descriptionTranslations {
+          key
+          value
+        }
+        articles {
+          id
+          title
+          permalink
+        }
+      }
+      count
+    }
+  }
+}

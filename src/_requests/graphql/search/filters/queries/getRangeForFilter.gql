@@ -1,0 +1,15 @@
+query getRangeForFilter($filter: GenericFilterRequestSearchNumberRangeInputType! ){
+  getRangeQueryHandler(filter: $filter) {
+    listDto {
+      items{
+        id
+        from
+        to
+        desc
+      }
+      count
+    }
+  }
+}
+
+

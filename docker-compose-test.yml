@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  test-pwa-aws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: 'front-test-pwa-aws'
+    ports:
+      - 127.0.0.1:5082:3000

@@ -1,0 +1,26 @@
+query getPopularHelpQuery($filter: GenericFilterRequestArticleRequestType!) {
+  getPopularHelpQuery(filter: $filter) {
+    listDto {
+      count
+      items {
+        id
+        title
+        permalink
+        categoryPermalink
+        categoryTitle
+        categoryIconUrl
+        unUsefulCount
+        usefulCount
+        content
+        titleTranslations {
+          key
+          value
+        }
+        contentTranslations {
+          key
+          value
+        }
+      }
+    }
+  }
+}

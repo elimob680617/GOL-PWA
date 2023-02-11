@@ -1,0 +1,23 @@
+query getPersonSkills($filter: GenericFilterRequestGetPersonSkillsInputType!) {
+  getPersonSkills(filter: $filter) {
+    listDto {
+      items {
+        id
+        personId
+        skill {
+          id
+          title
+        }
+        endorsementsCount
+        people {
+          fullName
+          avatarUrl
+          headline
+          firstName
+          lastName
+          id
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+mutation updateOrganizationUserField($filter: GenericMutationRequestOrganizationUserInputType!) {
+  updateOrganizationUserField(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      count
+      items {
+        id
+        groupCategory {
+          id
+          title
+          iconUrl
+          groupCategoryType
+        }
+        organizationUserType
+        groupCategoryId
+        numberRange {
+          id
+          from
+          to
+          desc
+        }
+        establishmentDate
+        sizeAudience
+        placeAudience
+        establishmentDateAudience
+        groupCategoryAudience
+        place {
+          id
+          description
+          mainText
+          secondaryText
+        }
+        placeId
+        address
+      }
+    }
+  }
+}

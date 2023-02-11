@@ -1,0 +1,10 @@
+
+mutation removeKeyWord($filter:GenericMutationRequestRemoveKeywordReqInputType  ){
+  removeKeywordCommandHandler(filter: $filter) {
+    listDto {
+      items{
+        id
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+mutation existUser($data: GenericMutationRequestExistUserInputType!) {
+  existUser(existUserReqDto: $data) {
+    isSuccess
+    listDto {
+      items {
+        isExist
+        message
+      }
+      count
+    }
+  }
+}
+

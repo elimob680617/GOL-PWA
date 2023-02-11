@@ -1,0 +1,6 @@
+mutation updateOrganizationUserBio($filter:GenericMutationRequestOrganizationUserBioInputType!){
+  updateOrganizationUserBio(filter:$filter){
+ isSuccess
+    messagingKey
+  }
+}

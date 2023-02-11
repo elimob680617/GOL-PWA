@@ -1,0 +1,20 @@
+query searchPlaces ($filter: GenericFilterRequestSearchPlacesInputType!){
+  searchPlaces(filter: $filter) {
+    listDto {
+      items {
+        status
+        predictions {
+          description
+          placeId
+          structuredFormatting {
+            mainText
+            secondaryText
+          }
+          searchType
+        }
+      }
+      count
+    }
+}
+} 
+ 

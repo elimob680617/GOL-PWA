@@ -1,0 +1,62 @@
+query getCommentReplay($filter:GenericFilterRequestCommentReqType!){
+  getRepliesPaginated(filter:$filter){
+    listDto{
+      count
+      items {
+        id
+        replyId
+        userId
+        parentId
+        orgId
+        userFullName
+        numberOfReplies
+        numberOfLikes
+        body
+        mediaUrl
+        mentionedUsers {
+          fullName
+          mentionedUserId
+        }
+        commentTags {
+          tagId
+          tagTitle
+        }
+        commentReplies {
+          id
+          replyId
+          userId
+          parentId
+          orgId
+          userFullName
+          numberOfReplies
+          numberOfLikes
+          body
+          mediaUrl
+          mentionedUsers {
+            fullName
+            mentionedUserId
+          }
+          commentTags {
+            tagId
+            tagTitle
+          }
+          commentReplies {
+            id
+            replyId
+            userId
+            parentId
+            orgId
+            userFullName
+            numberOfReplies
+            numberOfLikes
+            body
+            mediaUrl
+            isLikedByUser
+          }
+          isLikedByUser
+        }
+        isLikedByUser
+      }
+    }
+  }
+}
